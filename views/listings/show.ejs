@@ -100,7 +100,7 @@
 <!-- Jugad -->
 
 <div class="col-6 offset-3 mb-3">
-  <%if (coordinates.length > 0) {%>
+  <%if (coordinates.latitude && coordinates.longitude) {%>
   <div id="map" style="height: 400px;"></div>
     <script>
       var redIcon = L.icon({
