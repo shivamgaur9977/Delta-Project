@@ -100,6 +100,7 @@
 <!-- Jugad -->
 
 <div class="col-6 offset-3 mb-3">
+  <%if (coordinates.length > 0) {%>
   <div id="map" style="height: 400px;"></div>
     <script>
       var redIcon = L.icon({
@@ -130,4 +131,7 @@
       var marker = L.marker(['<%=coordinates.latitude%>', '<%=coordinates.longitude%>'], {icon: redIcon}).addTo(map)
       .bindPopup("<h6><%=listing.location%>, <%=listing.country%></h6>Exact location provided after booking.").openPopup();
     </script>
+    <%} else{%>
+      <h1>Cordinates Error</h1>
+    <%}%>
 </div>
